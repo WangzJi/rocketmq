@@ -84,23 +84,30 @@ public class BrokerData implements Comparable<BrokerData> {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         BrokerData other = (BrokerData) obj;
         if (brokerAddrs == null) {
-            if (other.brokerAddrs != null)
+            if (other.brokerAddrs != null) {
                 return false;
-        } else if (!brokerAddrs.equals(other.brokerAddrs))
+            }
+        } else if (!brokerAddrs.equals(other.brokerAddrs)) {
             return false;
+        }
         if (brokerName == null) {
-            if (other.brokerName != null)
+            if (other.brokerName != null) {
                 return false;
-        } else if (!brokerName.equals(other.brokerName))
+            }
+        } else if (!brokerName.equals(other.brokerName)) {
             return false;
+        }
         return true;
     }
 
